@@ -24,7 +24,7 @@ python setup.py install
 ## Data Preparation
 You should prepare your data as the following format:
 - data.csv
-> Examples: [demo-has-MatchedIS.csv](./examples/MatchedIS/demo-has-MatchedIS.csv) or [demo-no-MatchedIS.csv](./examples/NoMatchedIS/demo-no-MatchedIS.csv)
+> Examples: [demo-has-MatchedIS.csv](./examples/MatchedIS/demo-has-MatchedIS.csv) or [demo-no-MatchedIS.csv](./examples/NoMatchedIS/data-no-matchedIS.csv) 
 
 Note: The `matchedIS` is optional.
 
