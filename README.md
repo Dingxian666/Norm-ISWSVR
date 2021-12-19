@@ -26,12 +26,12 @@ You should prepare your data as the following format:
 - data.csv
 > Examples: [demo-has-MatchedIS.csv](./examples/MatchedIS/demo-has-MatchedIS.csv) or [demo-no-MatchedIS.csv](./examples/NoMatchedIS/data-no-matchedIS.csv) 
 
-Note: The `matchedIS` is optional.
+Note: The `matchedIS` column is optional.
 
 - sample.csv
 > Examples: [sample-info.csv](./examples/MatchedIS/sample-info.csv)
 
-Note: The `matchedIS` is optional.
+Note: The `injection_order` & `batch` columns are optional.
 
 ## Usage Examples
 
