@@ -12,6 +12,7 @@
 Note: 
 1. Boolean parameters `use_*` are configurable in using this package.
 2. With color label of the rectangular is the default process, is also the recommended processing in our paper.
+3. Patent has been applied, strictly prohibited for commercial use
 
 ## Install
 
