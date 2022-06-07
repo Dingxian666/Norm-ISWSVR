@@ -74,3 +74,4 @@ norm_iswsvr.run_with_grid_search(fold_nums=5,
 **For more functions, please refer the function help during using, thank you!**
 
 Please cite our paper if you find our work useful for your research:
+[1] Ding, X.; Yang, F.; Chen, Y.; Xu, J.; He, J.; Zhang, R.; Abliz, Z., Norm ISWSVR: A Data Integration and Normalization Approach for Large-Scale Metabolomics. Analytical Chemistry 2022, 94 (21), 7500-7509.
