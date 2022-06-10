@@ -17,7 +17,7 @@ Note:
 ## Install
 
 ```
-git clone https://github.com/Dingxian666/NormISWSVR.git
+git clone https://github.com/Dingxian666/Norm-ISWSVR.git
 cd Norm-ISWSVR
 python setup.py install
 ```
