@@ -5,7 +5,7 @@ import setuptools
  
 setuptools.setup(
     name='Norm-ISWSVR',
-    version='1.0.0',
+    version='1.0.1',
     keywords='',
     description="A Normalization Method Intergrated Internal Standard with Support Vector Regression",
     long_description="",

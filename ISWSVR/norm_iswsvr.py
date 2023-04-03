@@ -239,6 +239,10 @@ class NormISWSVR():
             # svr
             data = met_normalize_SVR(data, injection_orders=sample_orders, QC_col_names=QC_sample_names, \
                 corr_mode=self.svr_corr_mode, top_corr_k=svr_top_corr_k, gamma=svr_gamma, C=svr_C)
+            # 汇总结果
+            data_qc_median = np.median(data[QC_sample_names], axis=1)
+            for i, idx in enumerate(data.index):
+                data.loc[idx] = data.loc[idx] * data_qc_median[i]
             compute_all_types(data, label_df, logger=self.log, meta=f'SVR-After')
             if self.save_dir:
                 write_data(data, os.path.join(self.save_dir, f'{meta_info}-SVR-After.csv'), other_df=self.useless_df)
@@ -367,7 +371,8 @@ class NormISWSVR():
         return grid_df
     
 if __name__ == '__main__':
-    norm_iswsvr = NormISWSVR(data_path='/Users/iyuge2/Documents/github/Norm-ISWSVR/examples/MatchedIS/demo-has-MatchedIS.csv',
-                            sample_path='/Users/iyuge2/Documents/github/Norm-ISWSVR/examples/MatchedIS/sample-info.csv',
-                            save_dir='/Users/iyuge2/Documents/github/Norm-ISWSVR/examples/results')
-    norm_iswsvr.grid_search(fold_nums=2)
+    norm_iswsvr = NormISWSVR(data_path='/Users/iyuge2/Documents/github/NormISWSVR/examples/MatchedIS/demo-has-MatchedIS.csv',
+                            sample_path='/Users/iyuge2/Documents/github/NormISWSVR/examples/MatchedIS/sample-info.csv',
+                            save_dir='/Users/iyuge2/Documents/github/NormISWSVR/examples/results', 
+                            use_after_SVR=True)
+    norm_iswsvr.run_with_cv_folds()
